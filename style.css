@@ -1,7 +1,21 @@
+:root {
+  --primary-color: white;
+  --secondary-color: #1a1a1a;
+
+}
+
+.dark-theme {
+  --primary-color: #1a1a1a;
+  --secondary-color: white;
+}
 * {
   margin: 0;
   padding: 20;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+body{
+background-color: var(--primary-color);
+color: var(--secondary-color);
 }
 .background {
   top: 0;
@@ -12,7 +26,57 @@
   width: 45%;
   height: 100%;
 }
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
 
+.project {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 10px;
+  width: calc(33.33% - 20px);
+  box-sizing: border-box;
+}
+.header {
+  margin-top:50px;
+  text-align: center;
+  font-size: clamp(3rem, -0.0313rem + 6.5vw, 3.625rem);
+}
+.project-image {
+  width:100%;
+  height: 100%;
+  object-fit:cover;
+  max-width: 400px;
+  max-height: 200px;
+  min-width: 300px;
+  }
+  .project {
+    min-width: 300px;
+  }
+.project-title {
+
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+
+.project-description {
+  font-size: 1rem;
+}
+
+.project-button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.project-button:hover {
+  background-color: #2980b9;
+}
 
 nav{
   width: 100%;
@@ -25,12 +89,12 @@ nav{
 }
 
 .mynav.scrolled {
-  background-color: white;
+  background-color: #ffffff;
   box-shadow: 5px 5px 5px rgb(182, 182, 182);
 }
 
 .logo{
-  margin-right: 20px;
+  margin-right: 30px;
 }
 
 .nav-list{
@@ -56,26 +120,26 @@ nav{
 .nav-group{
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
 }
 
 a{
   text-decoration: none;
-  color: black;
+  color: var(--secondary-color);
 }
 
 .download-resume {
-  border: 2px solid black;
+  border: 2px solid var(--secondary-color);
   border-radius: 8px;
   font-weight: 600;
-  color: black;
+  color: var(--secondary-color);
   background-color: transparent;
   padding: 8px 20px;
 
 }
 .download-resume:hover {
-  background-color: black;
-  color: white;
+  background-color: var(--secondary-color);
+  color: rgb(253, 166, 166);
 }
 
 .menu-btn {
@@ -86,7 +150,7 @@ a{
 .menu-btn:before,
 .menu-btn:after,
 .menu-btn div {
-  background: #000000;
+  background: var(--secondary-color) ;
   content: "";
   display: block;
   height: 3px;
@@ -114,13 +178,13 @@ a{
 .home-content {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  width: 100%;
-  max-width: 400px;
+  gap: 10px;
+  width: 180%;
+  max-width: 450px;
 }
 
 .home-content h1 {
-  font-size: clamp(2rem, -0.0313rem + 6.5vw, 3.625rem);
+  font-size: clamp(3rem, -0.0313rem + 6.5vw, 3.625rem);
   overflow: hidden;
   white-space: nowrap;
   animation: 
@@ -128,16 +192,16 @@ a{
     blink-caret .75s step-end infinite;
 }
 .profile{
-  width: 100%;
-  max-width: 500px;
+  width: 150%;
+  max-width: 550px;
 }
 
 @keyframes typing {
   from { width: 0 }
-  to { width: 100% }
+  to { width: 150% }
 }
 #about{
-  margin-top: 40px;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -145,13 +209,13 @@ a{
   text-align: center;
 }
 #about h1 {
-  font-size: clamp(2rem, -0.0313rem + 6.5vw, 3.625rem);
+  font-size: clamp(3rem, -0.0313rem + 6.8vw, 3.640rem);
 }
 #about p{
   max-width: 800px;
 }
 #personal{
-  margin-top: 40px;
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -161,15 +225,15 @@ a{
 }
 
 .img-personal {
-  max-width: 400px;
+  max-width: 450px;
 }
 .info {
-  max-width: 600px;
+  max-width: 550px;
   display: flex;
   justify-content: space-between;
 }
 #education{
-  margin-top: 40px;
+  margin-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -178,12 +242,12 @@ a{
   font-size: clamp(2rem, -0.0313rem + 6.5vw, 3.625rem);
 }
 .img-education{
-  max-width: 400px;
+  max-width: 450px;
 }
 
 #contacts {
   font-size: clamp(2rem, -0.0313rem + 6.5vw, 3.625rem);
-  margin-top: 40px;
+  margin-top: 30px;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -236,13 +300,13 @@ input[type="email"] {
 }
 
 .view-projects:hover{
-  background-color: black;
+  background-color: var(--secondary-color);
   color: white;
 }
 
 footer {
   display: flex;
-  border-top: 1px solid black;
+  border-top: 1px solid var(--secondary-color);
   justify-content: space-between;
   margin: 20px;
   padding: 5px;
@@ -266,13 +330,13 @@ footer {
     padding: 10px;
   }
   nav {
-    background-color: white;
+    background-color: #DFB0b0(255, 155, 155);
     width: 100%;
     padding: 10px;
   }
   .nav-list {
     position: fixed;
-    background-color: white;
+    background-color:#DFB0b0(252, 155, 155);
     left: 0;
     top: 60px;
     width: 100%;
@@ -302,7 +366,7 @@ footer {
     flex-direction: column;
     justify-content: space-between;
     width: 20px;
-    height: 15px;
+    height: 25px;
     cursor: pointer;
     position: relative;
   }
@@ -310,7 +374,7 @@ footer {
   .line {
     width: 100%;
     height: 3px;
-    background-color: black;
+    background-color:  var(--secondary-color);
   }
   #personal {
     flex-direction: column;
